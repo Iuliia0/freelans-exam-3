@@ -1,9 +1,15 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
+  state: {
+    tasks: [],
+  },
   getters: {},
-  mutations: {},
+  mutations: {
+    pushTask(state, value) {
+      state.tasks.push(value.value)
+    }
+  },
   actions: {},
   modules: {},
 });
